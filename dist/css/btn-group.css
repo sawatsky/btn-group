@@ -1,18 +1,136 @@
-.btn {
-	padding: 1rem 1.5rem;
+.btn,
+.btn-group,
+.btn-header {
+	box-sizing: border-box;
+}
+
+.btn,
+.btn-group {
+	display: inline-block;
+	vertical-align: top;
 	margin: 0;
 	border: none;
 	border-radius: 0;
+	text-decoration: none;
 }
 
-.btn-group[data-orientation="horizontal"] {
-	
+.btn {
+	font-size: 1rem;
+	padding: 1rem 1.5rem;
+	cursor: pointer;
 }
 
-.btn-group[data-orientation="vertical"] {
-	
+.btn-group {
+	font-size: 0;
+	padding: 0;
+	cursor: default;
 }
 
 .btn-group-header {
-	font-size: 120%;
+	font-size: 1.2rem;
+	padding: 1rem 1.5rem 0.5rem 1.5rem;
+	cursor: default;
+	text-decoration: none;
+}
+
+.btn:hover,
+.btn-group:hover,
+.btn-group-header:hover {
+	text-decoration: none;
+}
+
+.btn-group > .btn,
+.btn-group > .btn-group-header,
+.btn-group > .btn-group {
+	margin: 0;
+}
+
+.btn-group[data-orientation="horizontal"] > .btn,
+.btn-group[data-orientation="horizontal"] > .btn-group {
+	display: inline-block;
+}
+
+.btn-group[data-orientation="vertical"] > .btn,
+.btn-group[data-orientation="vertical"] > .btn-group {
+	display: block;
+	width: 100%;
+}
+
+
+
+/*****************************************************************************
+								Core Theme
+*****************************************************************************/
+.btn-default,
+.btn-group-header {
+	background-color: rgb(204, 204, 204);
+}
+
+.btn-default:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	background-color: rgb(179, 179, 179);
+}
+
+.btn-primary {
+	background-color: rgb(80, 80, 80);
+}
+
+.btn-primary:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	background-color: rgb(55, 55, 55);
+}
+
+.btn-accent {
+	background-color: rgb(0, 51, 255);
+}
+
+.btn-accent:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	background-color: rgb(0, 26, 230);
+}
+
+.btn-danger {
+	background-color: rgb(255, 0, 0);
+}
+
+.btn-danger:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	background-color: rgb(230, 0, 0);
+}
+
+.btn-warn {
+	background-color: rgb(255, 255, 0);
+}
+
+.btn-warn:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	background-color: rgb(230, 230, 0);
+}
+
+.btn-success {
+	background-color: rgb(0, 255, 0);
+}
+
+.btn-success:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	background-color: rgb(0, 230, 0);
+}
+
+.btn-disabled,
+.btn.disabled,
+.btn[disabled] {
+	cursor: default;
+}
+
+.btn.btn-disabled,
+.btn.btn.disabled,
+.btn.btn[disabled] {
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+	/* IE 5-7 */
+	filter: alpha(opacity=50);
+
+	/* Netscape */
+	-moz-opacity: 0.5;
+
+	/* Safari 1.x */
+	-khtml-opacity: 0.5;
+
+	/* Good browsers */
+	opacity: 0.5;
 }

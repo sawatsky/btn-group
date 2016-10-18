@@ -2,36 +2,113 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.btn,
+.btn-group,
+.btn-group-header {
+	transition: background-color ease-out 0.25s, border-color ease-out 0.25s, color ease-out 0.25s;
+}
+
 .btn {
 	border: 1px transparent solid;
 	border-radius: 4px;
 }
 
-.btn.btn-default {
-	background-color: rgb(255, 255, 255);
-	border-color: #a3a3a3;
+.btn-group {
+	background-color: transparent;
+	border-radius: 4px;
+	overflow: hidden;
 }
 
-.btn.btn-primary {
-	background-color: #505050;
+.btn-group-header {
+	border: 1px transparent solid;
 }
 
-.btn.btn-accent {
-	background-color: #ffb900;
+
+.btn-group .btn-group,
+.btn-group .btn {
+	border-radius: 0;
 }
 
-.btn.btn-danger {
-	
+.btn-group[data-orientation="horizontal"] > .btn-group-header:first-child ~ .btn,
+.btn-group[data-orientation="horizontal"] > .btn-group-header:first-child ~ .btn-group {
+	border-top-color: transparent;
 }
 
-.btn.btn-warn {
-	
+.btn-group[data-orientation="horizontal"] > .btn:not(:last-child),
+.btn-group[data-orientation="horizontal"] > .btn + .btn:not(:last-child) {
+	border-right-color: transparent;
 }
 
-.btn.btn-success {
-	
+.btn-group[data-orientation="vertical"] > .btn-group-header:first-child + .btn,
+.btn-group[data-orientation="vertical"] > .btn-group-header:first-child + .btn-group {
+	border-top-color: transparent;
 }
 
-.btn.btn-disabled {
-	
+.btn-group[data-orientation="vertical"] > .btn:not(:first-child),
+.btn-group[data-orientation="vertical"] > .btn + .btn:not(:first-child) {
+	border-top-color: transparent;
+}
+
+.btn-group[data-orientation="vertical"] > .btn-group {
+	margin-top: -1px;
+}
+
+
+
+
+
+.btn-default,
+.btn-group-header {
+	border-color: rgb(179, 179, 179);
+}
+
+.btn-default:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	border-color: rgb(153, 153, 153);
+}
+
+.btn-primary {
+	border-color: rgb(55, 55, 55);
+}
+
+.btn-primary:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	border-color: rgb(30, 30, 30);
+}
+
+.btn-accent {
+	background-color: rgb(255, 185, 0);
+	border-color: rgb(230, 160, 0);
+}
+
+.btn-accent:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	background-color: rgb(230, 160, 0);
+	border-color: rgb(205, 135, 0);
+}
+
+.btn-danger {
+	border-color: rgb(230, 0, 0);
+}
+
+.btn-danger:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	border-color: rgb(204, 0, 0);
+}
+
+.btn-warn {
+	border-color: rgb(230, 230, 0);
+}
+
+.btn-warn:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	border-color: rgb(204, 204, 0);
+}
+
+.btn-success {
+	border-color: rgb(0, 230, 0);
+}
+
+.btn-success:not([disabled]):not(.disabled):not(.btn-disabled):hover {
+	border-color: rgb(0, 204, 0);
 }
