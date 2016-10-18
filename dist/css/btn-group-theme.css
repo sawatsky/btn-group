@@ -1,16 +1,8 @@
-* {
-	box-sizing: border-box;
-}
-
-body {
-	font-size: 16px;
-	line-height: 1.5;
-}
-
 .btn,
 .btn-group,
 .btn-group-header {
 	transition: background-color ease-out 0.25s, border-color ease-out 0.25s, color ease-out 0.25s;
+	text-align: center;
 }
 
 .btn {
@@ -21,13 +13,11 @@ body {
 .btn-group {
 	background-color: transparent;
 	border-radius: 4px;
-	overflow: hidden;
 }
 
 .btn-group-header {
 	border: 1px transparent solid;
 }
-
 
 .btn-group .btn-group,
 .btn-group .btn {
@@ -35,7 +25,11 @@ body {
 }
 
 .btn-group[data-orientation="horizontal"] > .btn-group-header:first-child ~ .btn,
-.btn-group[data-orientation="horizontal"] > .btn-group-header:first-child ~ .btn-group {
+.btn-group[data-orientation="horizontal"] > .btn-group-header:first-child ~ .btn-group,
+.btn-group[data-orientation="vertical"] > .btn-group-header:first-child + .btn,
+.btn-group[data-orientation="vertical"] > .btn-group-header:first-child + .btn-group,
+.btn-group[data-orientation="vertical"] > .btn:not(:first-child),
+.btn-group[data-orientation="vertical"] > .btn + .btn:not(:first-child) {
 	border-top-color: transparent;
 }
 
@@ -44,24 +38,15 @@ body {
 	border-right-color: transparent;
 }
 
-.btn-group[data-orientation="vertical"] > .btn-group-header:first-child + .btn,
-.btn-group[data-orientation="vertical"] > .btn-group-header:first-child + .btn-group {
-	border-top-color: transparent;
-}
-
-.btn-group[data-orientation="vertical"] > .btn:not(:first-child),
-.btn-group[data-orientation="vertical"] > .btn + .btn:not(:first-child) {
-	border-top-color: transparent;
-}
-
 .btn-group[data-orientation="vertical"] > .btn-group {
 	margin-top: -1px;
 }
 
 
 
-
-
+/*****************************************************************************
+								Custom Theme
+*****************************************************************************/
 .btn-default,
 .btn-group-header {
 	border-color: rgb(179, 179, 179);
@@ -73,6 +58,7 @@ body {
 
 .btn-primary {
 	border-color: rgb(55, 55, 55);
+	color: rgb(255, 255, 255);
 }
 
 .btn-primary:not([disabled]):not(.disabled):not(.btn-disabled):hover {
@@ -82,6 +68,7 @@ body {
 .btn-accent {
 	background-color: rgb(255, 185, 0);
 	border-color: rgb(230, 160, 0);
+	color: rgb(255, 255, 255);
 }
 
 .btn-accent:not([disabled]):not(.disabled):not(.btn-disabled):hover {
@@ -91,6 +78,7 @@ body {
 
 .btn-danger {
 	border-color: rgb(230, 0, 0);
+	color: rgb(255, 255, 255);
 }
 
 .btn-danger:not([disabled]):not(.disabled):not(.btn-disabled):hover {

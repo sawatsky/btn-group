@@ -1,7 +1,8 @@
 .btn,
 .btn-group,
-.btn-header {
+.btn-group-header {
 	box-sizing: border-box;
+	white-space: nowrap;
 }
 
 .btn,
@@ -16,7 +17,7 @@
 
 .btn {
 	font-size: 1rem;
-	padding: 1rem 1.5rem;
+	padding: 0.5rem 1rem;
 	cursor: pointer;
 }
 
@@ -24,11 +25,12 @@
 	font-size: 0;
 	padding: 0;
 	cursor: default;
+	overflow: hidden;
 }
 
 .btn-group-header {
 	font-size: 1.2rem;
-	padding: 1rem 1.5rem 0.5rem 1.5rem;
+	padding: 0.5rem 1rem 0.25rem 1rem;
 	cursor: default;
 	text-decoration: none;
 }
@@ -40,20 +42,20 @@
 }
 
 .btn-group > .btn,
-.btn-group > .btn-group-header,
-.btn-group > .btn-group {
+.btn-group > .btn-group,
+.btn-group > .btn-group-header {
 	margin: 0;
-}
-
-.btn-group[data-orientation="horizontal"] > .btn,
-.btn-group[data-orientation="horizontal"] > .btn-group {
-	display: inline-block;
 }
 
 .btn-group[data-orientation="vertical"] > .btn,
 .btn-group[data-orientation="vertical"] > .btn-group {
 	display: block;
 	width: 100%;
+}
+
+.btn-group[data-orientation="horizontal"] > .btn,
+.btn-group[data-orientation="horizontal"] > .btn-group {
+	display: inline-block;
 }
 
 
