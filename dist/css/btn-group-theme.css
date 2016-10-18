@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+}
+
+.btn {
+	border: 1px transparent solid;
+	border-radius: 4px;
+}
+
+.btn.btn-default {
+	background-color: rgb(255, 255, 255);
+	border-color: #a3a3a3;
+}
+
+.btn.btn-primary {
+	background-color: #505050;
+}
+
+.btn.btn-accent {
+	background-color: #ffb900;
+}
+
+.btn.btn-danger {
+	
+}
+
+.btn.btn-warn {
+	
+}
+
+.btn.btn-success {
+	
+}
+
+.btn.btn-disabled {
+	
+}
